@@ -231,10 +231,10 @@ def get_gif():
             oY = int(H * 0.8)
             output = overlay_image(output, dwi, dwiMask, (oX, oY))
 
-            # write the output image to our temporary directory
-            p = os.path.sep.join([config["temp_dir"], "{}.jpg".format(
-                str(i).zfill(8))])
-            cv2.imwrite(p, output)
+        # write the output image to our temporary directory
+        p = os.path.sep.join([config["temp_dir"], "{}.jpg".format(
+            str(i).zfill(8))])
+        cv2.imwrite(p, output)
 
     # now that all of our frames have been written to disk we can finally
     # create our output GIF image
